@@ -1,0 +1,143 @@
+<!-- <ion-header>
+  <ion-toolbar>     
+    <ion-buttons>
+        <ion-back-button slot="start"></ion-back-button>
+      </ion-buttons>
+      <ion-title>Registration</ion-title>
+    </ion-toolbar>
+  </ion-header>
+<ion-content>
+<div>
+  <ion-item>
+    <ion-label position="floating">Bussiness name</ion-label>
+    <ion-input [(ngModel)]="user.businessname" type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-icon name="globe-outline"></ion-icon> 
+    <ion-input placeholder="public profile"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="floating">Name</ion-label>
+    <ion-input [(ngModel)]="user.name" type="text"></ion-input>
+  </ion-item>
+
+  <ion-item> -->
+<!--geolocation
+        <ion-button (click)="getGeolocation()" color="success" expand="full">Get Location</ion-button>
+   geo address
+   </ion-item>-->
+<!-- 
+  <ion-item>
+    <ion-label position="floating" required>Email</ion-label>
+    <ion-input [(ngModel)]="user.Email" type="text" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">phone</ion-label>
+    <ion-input [(ngModel)]="user.phone" type="text"></ion-input>
+  </ion-item>
+</div> 
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-button [disabled]="!user.businessname|| !user.name || !user.Email" (click)="register()"> Create your Account </ion-button>
+      </ion-item>
+    </ion-col>
+    <ion-col>
+      <ion-item>
+        <ion-button (click)="skip()">Skip</ion-button>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<ion-item>
+  <ion-button (click)="logout()">Logout</ion-button>
+</ion-item>
+</ion-content> -->
+
+<ion-content class="background">
+    <ion-slides pager="true" [options]="slideOpts" #slideWithNav 
+    (ionSlideDidChange)="SlideDidChange(sliderOne,slideWithNav)">
+        <ion-slide class="welcomeTitle">
+            <ion-label position="floating">Welcome! </ion-label>
+            <ion-label position="floating" text-align="center">You've logged in successfully.</ion-label>
+        </ion-slide>
+        <ion-slide>
+            <div>
+                <ion-item>
+                    <ion-label class='d-flex' position="floating">Bussiness name</ion-label>
+                    <ion-input [(ngModel)]="user.businessname" type="text"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-icon name="globe-outline"></ion-icon>
+                    <ion-input placeholder="public profile"></ion-input>
+                </ion-item>
+                <!-- <ion-item>
+              <ion-label position="floating">Name</ion-label>
+              <ion-input [(ngModel)]="user.name" type="text"></ion-input>
+            </ion-item> -->
+                <ion-item>
+                    <!--geolocation-->
+                    <ion-button (click)="getGeolocation()" color="success" expand="full">Get Location</ion-button>
+                    <!-- geo address -->
+                </ion-item>
+                <!-- <ion-item>
+              <ion-label position="floating" required>Email</ion-label>
+              <ion-input [(ngModel)]="user.Email" type="text" required></ion-input>
+            </ion-item> -->
+
+                <!-- <ion-item>
+                  <ion-label position="floating">phone</ion-label>
+                  <ion-input [(ngModel)]="user.phone" type="text"></ion-input>
+                </ion-item> -->
+            </div>
+
+            <div class="registerbutton">
+                <ion-item>
+                    <ion-button shape="round" (click)="register()">Sign up</ion-button>
+                </ion-item>
+            </div>
+
+            <!-- <ion-grid>
+                <ion-row>
+                  <div class="registerbutton">
+                    <ion-col>
+                      <ion-item>
+                        <ion-button shape="round" (click)="register()">Create Account</ion-button>
+                      </ion-item>
+                     </ion-col>
+                  </div>
+                   <ion-col>
+                    <ion-item>
+                      <ion-button (click)="skip()">Skip</ion-button>
+                    </ion-item>
+                  </ion-col> 
+                </ion-row>
+              </ion-grid> -->
+
+            <!-- <ion-item>
+                <ion-button (click)="logout()">Logout</ion-button>
+              </ion-item> -->
+
+        </ion-slide>
+        <ion-slide>
+            <div class="Emailslide">
+                <ion-input class="form-control" style="width: 200px;" placeholder="Name" [(ngModel)]="user.name" type="text"></ion-input>
+            </div>
+        </ion-slide>
+
+        <ion-slide>
+            <div class="Emailslide">
+                <!-- <ion-item> -->
+                <!-- <ion-label  for="floatingInput">Email</ion-label> -->
+                <ion-input class="form-control" placeholder="Email" [(ngModel)]="user.Email" type="text" required></ion-input>
+                <!-- </ion-item> -->
+            </div>
+        </ion-slide>
+        <ion-slide>
+        </ion-slide>
+    </ion-slides>
+</ion-content>

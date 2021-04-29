@@ -1,0 +1,105 @@
+<ion-app>
+  <ion-menu menuId="main-menu" content-id="main">
+    <ion-header>
+      <ion-toolbar  color="forestgreen">
+        <ion-title class="ion-text-center">Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <span class="form-inline">
+        <select 
+            class="form-control" 
+            #selectedLang 
+            (change)="switchLang(selectedLang.value)">
+          <option *ngFor="let language of translate.getLangs()" 
+            [value]="language"
+            [selected]="language === translate.currentLang">
+            {{ language }}
+          </option>
+        </select>
+      </span>
+
+      <nav class="navbar navbar-dark bg-primary">
+        <div class="container">
+          <a class="navbar-brand">
+            {{'Sitetitle' | translate }}
+          </a>
+          <span class="form-inline">
+            <select class="form-control" #selectedLang (change)="switchLang(selectedLang.value)">
+              <option *ngFor="let language of translate.getLangs()" [value]="language"
+                [selected]="language === translate.currentLang">
+                {{ language }}
+              </option>
+            </select>
+          </span>
+        </div>
+      </nav>
+      <ion-list>
+         <!--<ion-item routerLink="/client">
+          <ion-icon name="people-outline" slot="start"></ion-icon>
+          <ion-label>Client</ion-label>
+        </ion-item> 
+
+        <ion-item routerLink="/staff">
+          <ion-icon name="person-add-outline" slot="start"></ion-icon>
+          <ion-label>Add staff</ion-label>
+        </ion-item> -->
+
+        <ion-item routerLink="/sales">
+          <ion-icon name="cart-outline" slot="start"></ion-icon>
+          <ion-label>sales</ion-label>
+        </ion-item>
+
+        <ion-item routerLink="/marketing">
+          <ion-icon name="mail-outline" slot="start"></ion-icon>
+          <ion-label>Marketing</ion-label>
+        </ion-item>
+
+        <ion-item routerLink="/inventory">
+          <ion-icon name="add-circle-outline" slot="start"></ion-icon>
+          <ion-label>Categories</ion-label>
+        </ion-item>
+
+        <ion-item routerLink="/business">
+          <ion-icon name="business-outline" slot="start"></ion-icon>
+          <ion-label>Business profile</ion-label>
+        </ion-item>
+
+        <ion-item routerLink="/settings">
+          <ion-icon name="construct-outline" slot="start"></ion-icon>
+          <ion-label>Settings</ion-label>
+        </ion-item>
+
+        <ion-item routerLink="/reviews">
+          <ion-icon name="star-half-outline" slot="start"></ion-icon>
+          <ion-label>Reviews & Ratings</ion-label>
+        </ion-item>
+        <br>
+
+        <div class="center">
+          <ion-button color="danger" shape="round"  (click)="close()">Logout</ion-button>
+        </div>
+
+      </ion-list>
+    </ion-content>
+    <ion-footer class="ion-no-border">
+      <ion-toolbar>
+        <ion-title> profile</ion-title>
+        <ion-list>
+          <ion-item routerLink="/profile">
+            <ion-icon name="person-circle-outline" slot="start"></ion-icon>
+            <ion-label>Your profile</ion-label>
+            <ion-badge color="warning">Owner</ion-badge>
+          </ion-item>
+          <ion-item routerLink="/public">
+            <ion-icon name="globe-outline" slot="start"></ion-icon>
+            <ion-label>public profile</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-toolbar>
+    </ion-footer>
+  </ion-menu>
+
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-app>

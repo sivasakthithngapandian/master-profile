@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>info</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let item of companyinfodata">
+    <ion-card-content>
+
+      <div>
+    <ion-item>
+      <!-- <ion-label>{{item.bussinessname}}</ion-label> -->
+      <ion-input>{{item.bussinessname}}</ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="globe-outline"></ion-icon> 
+      <ion-input placeholder="public profile"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label position="floating">Name</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    
+    <ion-item> 
+      <!--geolocation-->
+      <ion-button (click)="getGeolocation()" color="success" expand="full">Get Location</ion-button>
+     <!-- geo address -->
+     </ion-item>
+     
+     <ion-item>
+       <ion-label position="floating" required>Email</ion-label>
+       <ion-input type="text" required></ion-input>
+      </ion-item>
+      
+      <!-- <ion-item>
+        <ion-label position="floating">phone</ion-label>
+        <ion-input [(ngModel)]="user.phone" type="text"></ion-input>
+      </ion-item> -->
+    </div>
+    
+    <div class="registerbutton">
+      <ion-item>
+        <ion-button shape="round" (click)="register()">Create Account</ion-button>
+      </ion-item>
+    </div>
+  </ion-card-content>
+</ion-card>
+</ion-content>

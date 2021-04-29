@@ -1,0 +1,58 @@
+    <ion-content>
+
+      <ion-item > 
+        <div>
+          <ion-label size="1"slot="end" small icon-only outline (click)="Accesscamera()" color="primary">
+           <ion-icon name="camera"> Camera</ion-icon>
+          </ion-label>
+        </div>
+      </ion-item>
+        <ion-item>
+        <div>
+          <ion-label slot="end" small icon-only outline (click)="AccessGallery()" color="primary">
+          <ion-icon size="5" name="image"> Gallery</ion-icon>
+          </ion-label>
+        </div>
+      </ion-item>
+            <img [src]="base64Image" *ngIf="base64Image"/>
+  
+  <div class="container" color="primary">
+    <div class="overylay">
+      <ion-avatar (click)="presentActionSheet()">
+              <img src="../../../assets/avatar.png">
+        </ion-avatar>
+    </div>
+  </div>
+  <div *ngFor="let item of ownerprofile">   
+    <ion-card >
+    <ion-card-header>
+      <ion-item>
+        <ion-card-title>
+          <p><ion-label color="primary">Business name:</ion-label>{{item.bussinessname}}</p>
+        </ion-card-title>
+     </ion-item>
+     <ion-item>      
+       <ion-card-subtitle>
+        <p><ion-label color="primary">Name:</ion-label>{{item.name}}</p>
+      </ion-card-subtitle>
+    </ion-item>
+    <ion-item>
+      <ion-card-subtitle>
+        <p><ion-label color="primary"><ion-icon name="mail" size="2px"></ion-icon>Email:</ion-label>{{item.Email}}</p>
+      </ion-card-subtitle>
+    </ion-item>
+    <ion-item>
+      <ion-card-subtitle>
+        <p><ion-label color="primary"><ion-icon name="call" size="2px"></ion-icon>Contact no:</ion-label>{{item.phone}}</p>
+      </ion-card-subtitle>
+    </ion-item>
+    <ion-item>
+    <ion-card-subtitle>
+  <p><ion-label color="primary"><ion-icon name="locate" size="2px"></ion-icon>Address:</ion-label>{{item.address}}</p>
+  </ion-card-subtitle>
+</ion-item>
+    </ion-card-header>
+</ion-card>
+</div>
+
+

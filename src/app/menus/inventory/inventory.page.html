@@ -1,0 +1,182 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>inventory</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- <div>
+  <ion-list>
+    <ion-list-header><b> Main Categories </b></ion-list-header>
+      <ion-item>
+        <ion-label>Hair saloon</ion-label>
+        <ion-checkbox color="primary" slot="start"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox color="primary" slot="start"></ion-checkbox>
+        <ion-label>Spa and massage</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox color="dark" slot="start"></ion-checkbox>
+        <ion-label>Barbershop</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox color="dark" slot="start"></ion-checkbox>
+        <ion-label>Ladies beauty parlour</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox color="dark" slot="start"></ion-checkbox>
+        <ion-label>Psychotherapy</ion-label>
+      </ion-item>
+      </ion-list>
+</div> -->
+
+<!-- <div>
+  <ion-label><b>Main Categories</b></ion-label>
+  <ion-item>
+    <ion-select value="Hair saloon" [(ngModel)]="inventory.categories">
+      <ion-select-option value="Hair saloon">Hair saloon</ion-select-option>
+      <ion-select-option value="Spa and massage">Spa and massage</ion-select-option>
+      <ion-select-option value="Ladies beauty parlour">Ladies beauty parlour</ion-select-option>
+      <ion-select-option value="Psychotherapy">Psychotherapy</ion-select-option>
+      <ion-select-option value="Barbershop">Barbershop</ion-select-option>
+       <ion-select-option value="06">9am to 8pm</ion-select-option>
+      <ion-select-option value="07">10am to 6pm</ion-select-option>
+      <ion-select-option value="07">10am to 7pm</ion-select-option>
+      <ion-select-option value="07">10am to 8pm</ion-select-option> 
+    </ion-select>
+  </ion-item>
+</div> -->
+<!-- <div>
+  <ion-list>
+    <ion-list-header><b>Categories of your business</b></ion-list-header>
+    <ion-item>
+      <ion-label>Hair saloon</ion-label>
+      <ion-checkbox value="Hair saloon" color="primary" slot="end" (ionChange)="elmentchange($event)"></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-checkbox value="Spa and massage" color="primary" slot="end" (ionChange)="elmentchange($event)" ></ion-checkbox>
+      <ion-label>Spa and massage</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-checkbox value="Barbershop" color="primary" slot="end" (ionChange)="elmentchange($event)"></ion-checkbox>
+      <ion-label>Barbershop</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-checkbox value="Ladies beauty parlour" color="primary" slot="end" (ionChange)="elmentchange($event)"></ion-checkbox>
+      <ion-label>Ladies beauty parlour</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-checkbox value="Psychotherapy" color="primary" slot="end" (ionChange)="elmentchange($event)"></ion-checkbox>
+      <ion-label>Psychotherapy</ion-label>
+    </ion-item>
+      <ion-item>
+        <ion-label>Nail saloon</ion-label>
+        <ion-checkbox value="Nail saloon" color="primary" slot="end" (ionChange)="elmentchange($event)"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox value="Eyebrows & Lashes" color="primary" slot="end" (ionChange)="elmentchange($event)"></ion-checkbox>
+        <ion-label>Eyebrows & Lashes</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox value="Makeup Artist" color="primary" slot="end" (ionChange)="elmentchange($event)"></ion-checkbox>
+        <ion-label>Makeup Artist</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox value="Tattoo shops" color="primary" slot="end" (ionChange)="elmentchange($event)"></ion-checkbox>
+        <ion-label>Tattoo shops</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox value="Wedding makeup Artist" color="primary" slot="end" (ionChange)="elmentchange($event)"></ion-checkbox>
+        <ion-label>Wedding makeup Artist</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox value="Day spa" color="primary" slot="end" (ionChange)="elmentchange($event)"></ion-checkbox>
+        <ion-label>Day spa</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox value="Medical Esthetician" color="primary" slot="end" (ionChange)="elmentchange($event)"></ion-checkbox>
+        <ion-label>Medical Esthetician</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox value="Teeth Whitening" color="primary" slot="end" (ionChange)="elmentchange($event)"></ion-checkbox>
+        <ion-label>Teeth Whitening</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox value="Pet service" color="primary" slot="end" (ionChange)="elmentchange($event)"></ion-checkbox>
+        <ion-label>Pet service</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox value="Hair Removal" color="primary" slot="end" (ionChange)="elmentchange($event)"></ion-checkbox>
+        <ion-label>Hair Removal</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox value="Home improvement" color="primary" slot="end" (ionChange)="elmentchange($event)"></ion-checkbox>
+        <ion-label>Home improvement</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox value="Podiatry" color="primary" slot="end" (ionChange)="elmentchange($event)"></ion-checkbox>
+        <ion-label>Podiatry</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox value="Physical therapy" color="primary" slot="end" (ionChange)="elmentchange($event)"></ion-checkbox>
+        <ion-label>Physical therapy</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox color="primary" slot="end" (ionChange)="elmentchange($event)"></ion-checkbox>
+        <ion-label>Others</ion-label>
+      </ion-item>
+    </ion-list> 
+  </div>-->
+      <ion-card *ngFor="let item of servicedatalist">
+        <ion-card-content>
+          <ion-item>
+            <ion-label><b>category Name : {{item.id}}</b></ion-label>
+          </ion-item>
+          <!-- <ion-label><b>Services</b></ion-label> -->
+          <ion-item>
+            <ion-label>Services</ion-label>
+            <ion-select [(ngModel)]="categories1.service1">
+              <ion-select-option [value]="item.service1">{{item.service1}}</ion-select-option>
+              <ion-select-option [value]="item.service2">{{item.service2}}</ion-select-option>
+              <ion-select-option [value]="item.service3">{{item.service3}}</ion-select-option>
+              <ion-select-option [value]="item.service4">{{item.service4}}</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <!-- <ion-item>
+            <ion-label>{{item.service1}}</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>{{item.service2}}</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>{{item.service3}}</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>{{item.service4}}</ion-label>
+          </ion-item> -->
+          <ion-item>
+            <ion-input [(ngModel)]="categories1.price" placeholder="price"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-button (click)="saveservices()">Save</ion-button>
+          </ion-item>
+        </ion-card-content>
+      </ion-card>
+<!-- <ion-grid>
+  <ion-row>
+    <ion-col>
+      <ion-button (click)="back()">Back</ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button (click)="save()">Save</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-grid> -->
+
+
+</ion-content>

@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title >service</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-input placeholder="Service name" [(ngModel)]="services.ServiceName" clearInput></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>service in categories</ion-label>
+    <ion-select [(ngModel)]="services.categories">
+      <!-- <ion-list *ngFor="let item of categoriesdatalist">
+        <ion-item>
+          <ion-select-option [value]="item.categories">{{item.categories}}</ion-select-option>
+        </ion-item>
+      <ion-label>{{item.categories}}</ion-label> -->
+      <ion-select-option value="Hair saloon">Hair saloon</ion-select-option>
+      <ion-select-option value="Spa and massage">Spa and massage</ion-select-option>
+      <ion-select-option value="Barbershop">Barbershop</ion-select-option>
+      <ion-select-option value="Ladies beauty parlour">Ladies beauty parlour</ion-select-option>
+      <ion-select-option value="Psychotherapy"> Psychotherapy</ion-select-option>
+    <!-- </ion-list> -->
+    </ion-select>
+  </ion-item>
+
+  
+  <ion-item>
+    <ion-label>Duration</ion-label>
+    <ion-select value="0hour(s)" [(ngModel)]="services.hours">
+      <ion-select-option value="0hour(s)">0hour(s)</ion-select-option>
+      <ion-select-option value="1hour">1hour</ion-select-option>
+      <ion-select-option value="2hours">2hours</ion-select-option>
+      <ion-select-option value="3hours">3hours</ion-select-option>
+      <ion-select-option value="4hours">4hours</ion-select-option>
+      <!-- <ion-select-option value="30minutes"></ion-select-option>
+      <ion-select-option value="06"></ion-select-option>
+      <ion-select-option value="07"></ion-select-option>
+      <ion-select-option value="07"></ion-select-option>
+      <ion-select-option value="07"></ion-select-option> -->
+    </ion-select>
+    <ion-select value="30minutes" [(ngModel)]="services.minutes">
+      <ion-select-option value="10Minute">10Minute</ion-select-option>
+      <ion-select-option value="15minute">15minute</ion-select-option>
+      <ion-select-option value="20minutes">20minutes</ion-select-option>
+      <ion-select-option value="25minutes">25minutes</ion-select-option>
+      <ion-select-option value="30minutes">30minutes</ion-select-option>
+      <ion-select-option value="35minutes">35minutes</ion-select-option>
+      <ion-select-option value="45minutes">45minutes</ion-select-option>
+      <ion-select-option value="50minutes">50minutes</ion-select-option>
+      <ion-select-option value="55minutes">55minutes</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-input [(ngModel)]="services.price" placeholder="Price" clearInput></ion-input>
+  </ion-item>
+
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="back()">Back</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="getServiceDetails()">Save</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

@@ -1,0 +1,945 @@
+ <ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>opening Hours</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+        <ion-list>
+          <ion-list-header class="ion-text-center">Opening Hours</ion-list-header>
+          <ion-input>            
+            <ion-item>
+              <ion-label>Monday</ion-label>
+              <ion-checkbox color="primary" slot="start" [(ngModel)]="open.Monday"></ion-checkbox>
+            </ion-item>
+            <ion-select slot="end" placeholder="0.00am" [(ngModel)]="open.am">
+              <ion-select-option value="12.00am">12.00am</ion-select-option>
+              <ion-select-option value="12.00am">12.15am</ion-select-option>
+              <ion-select-option value="12.00am">12.30am</ion-select-option>
+              <ion-select-option value="12.00am">12.45am</ion-select-option>
+
+              <ion-select-option value="1.00am">1.00am</ion-select-option>
+              <ion-select-option value="1.15am">1.15am</ion-select-option>
+              <ion-select-option value="1.30am">1.30am</ion-select-option>
+              <ion-select-option value="1.45am">1.45am</ion-select-option>
+
+              <ion-select-option value="2.00am">2.00am</ion-select-option>
+              <ion-select-option value="2.15am">2.15am</ion-select-option>
+              <ion-select-option value="2.30am">2.30am</ion-select-option>
+              <ion-select-option value="2.45am">2.45am</ion-select-option>
+
+              <ion-select-option value="3.00am">3.00am</ion-select-option>
+              <ion-select-option value="3.15am">3.15am</ion-select-option>
+              <ion-select-option value="3.30am">3.30am</ion-select-option>
+              <ion-select-option value="3.45am">3.45am</ion-select-option>
+
+              <ion-select-option value="4.00am">4.00am</ion-select-option>
+              <ion-select-option value="4.15am">4.15am</ion-select-option>
+              <ion-select-option value="4.30am">4.30am</ion-select-option>
+              <ion-select-option value="4.45am">4.45am</ion-select-option>
+
+              <ion-select-option value="5.00am">5.00am</ion-select-option>
+              <ion-select-option value="5.15am">5.15am</ion-select-option>
+              <ion-select-option value="5.30am">5.30am</ion-select-option>
+              <ion-select-option value="5.45am">5.45am</ion-select-option>
+
+              <ion-select-option value="6.00am">6.00am</ion-select-option>
+              <ion-select-option value="6.15am">6.15am</ion-select-option>
+              <ion-select-option value="6.30am">6.30am</ion-select-option>
+              <ion-select-option value="6.45am">6.45am</ion-select-option>
+
+              <ion-select-option value="7.00am">7.00am</ion-select-option>
+              <ion-select-option value="7.15am">7.15am</ion-select-option>
+              <ion-select-option value="7.30am">7.30am</ion-select-option>
+              <ion-select-option value="7.45am">7.45am</ion-select-option>
+
+              <ion-select-option value="8.00am">8.00am</ion-select-option>
+              <ion-select-option value="8.15am">8.15am</ion-select-option>
+              <ion-select-option value="8.30am">8.30am</ion-select-option>
+              <ion-select-option value="8.45am">8.45am</ion-select-option>
+
+              <ion-select-option value="9.00am">9.00am</ion-select-option>
+              <ion-select-option value="9.15am">9.15am</ion-select-option>
+              <ion-select-option value="9.30am">9.30am</ion-select-option>
+              <ion-select-option value="9.45am">9.45am</ion-select-option>
+
+              <ion-select-option value="10.00am">10.00am</ion-select-option>
+              <ion-select-option value="10.15am">10.15am</ion-select-option>
+              <ion-select-option value="10.30am">10.30am</ion-select-option>
+              <ion-select-option value="10.45am">10.45am</ion-select-option>
+
+              <ion-select-option value="11.00am">11.00am</ion-select-option>
+              <ion-select-option value="11.15am">11.15am</ion-select-option>
+              <ion-select-option value="11.30am">11.30am</ion-select-option>
+              <ion-select-option value="11.45am">11.45am</ion-select-option>
+              <ion-select-option value="closed">closed</ion-select-option>
+            </ion-select>
+
+            <ion-select placeholder="0.00pm" [(ngModel)]="open.pm">
+              <ion-select-option value="12.00pm">12.00pm</ion-select-option>
+              <ion-select-option value="12.00pm">12.15pm</ion-select-option>
+              <ion-select-option value="12.00pm">12.30pm</ion-select-option>
+              <ion-select-option value="12.00pm">12.45pm</ion-select-option>
+
+              <ion-select-option value="1.00pm">1.00pm</ion-select-option>
+              <ion-select-option value="1.15pm">1.15pm</ion-select-option>
+              <ion-select-option value="1.30pm">1.30pm</ion-select-option>
+              <ion-select-option value="1.45pm">1.45pm</ion-select-option>
+
+              <ion-select-option value="2.00pm">2.00pm</ion-select-option>
+              <ion-select-option value="2.15pm">2.15pm</ion-select-option>
+              <ion-select-option value="2.30pm">2.30pm</ion-select-option>
+              <ion-select-option value="2.45pm">2.45pm</ion-select-option>
+
+              <ion-select-option value="3.00pm">3.00pm</ion-select-option>
+              <ion-select-option value="3.15pm">3.15pm</ion-select-option>
+              <ion-select-option value="3.30pm">3.30pm</ion-select-option>
+              <ion-select-option value="3.45pm">3.45pm</ion-select-option>
+
+              <ion-select-option value="4.00pm">4.00pm</ion-select-option>
+              <ion-select-option value="4.15pm">4.15pm</ion-select-option>
+              <ion-select-option value="4.30pm">4.30pm</ion-select-option>
+              <ion-select-option value="4.45pm">4.45pm</ion-select-option>
+
+              <ion-select-option value="5.00pm">5.00pm</ion-select-option>
+              <ion-select-option value="5.15pm">5.15pm</ion-select-option>
+              <ion-select-option value="5.30pm">5.30pm</ion-select-option>
+              <ion-select-option value="5.45pm">5.45pm</ion-select-option>
+
+              <ion-select-option value="6.00pm">6.00pm</ion-select-option>
+              <ion-select-option value="6.15pm">6.15pm</ion-select-option>
+              <ion-select-option value="6.30pm">6.30pm</ion-select-option>
+              <ion-select-option value="6.45pm">6.45pm</ion-select-option>
+
+              <ion-select-option value="7.00pm">7.00pm</ion-select-option>
+              <ion-select-option value="7.15pm">7.15pm</ion-select-option>
+              <ion-select-option value="7.30pm">7.30pm</ion-select-option>
+              <ion-select-option value="7.45pm">7.45pm</ion-select-option>
+
+              <ion-select-option value="8.00pm">8.00pm</ion-select-option>
+              <ion-select-option value="8.15pm">8.15pm</ion-select-option>
+              <ion-select-option value="8.30pm">8.30pm</ion-select-option>
+              <ion-select-option value="8.45pm">8.45pm</ion-select-option>
+
+              <ion-select-option value="9.00pm">9.00pm</ion-select-option>
+              <ion-select-option value="9.15pm">9.15pm</ion-select-option>
+              <ion-select-option value="9.30pm">9.30pm</ion-select-option>
+              <ion-select-option value="9.45pm">9.45pm</ion-select-option>
+
+              <ion-select-option value="10.00pm">10.00pm</ion-select-option>
+              <ion-select-option value="10.15pm">10.15pm</ion-select-option>
+              <ion-select-option value="10.30pm">10.30pm</ion-select-option>
+              <ion-select-option value="10.45pm">10.45pm</ion-select-option>
+
+              <ion-select-option value="11.00pm">11.00pm</ion-select-option>
+              <ion-select-option value="11.15pm">11.15pm</ion-select-option>
+              <ion-select-option value="11.30pm">11.30pm</ion-select-option>
+              <ion-select-option value="11.45pm">11.45pm</ion-select-option>
+            </ion-select>
+          </ion-input>
+
+          <ion-input>
+            <ion-item>
+              <ion-label>Tusday</ion-label>
+              <ion-checkbox color="primary" slot="start" [(ngModel)]="open.tusday"></ion-checkbox>
+            </ion-item>
+            <ion-select slot="end"  placeholder="0.00am" [(ngModel)]="open.am1">
+              <ion-select-option value="12.00am">12.00am</ion-select-option>
+              <ion-select-option value="12.00am">12.15am</ion-select-option>
+              <ion-select-option value="12.00am">12.30am</ion-select-option>
+              <ion-select-option value="12.00am">12.45am</ion-select-option>
+
+              <ion-select-option value="1.00am">1.00am</ion-select-option>
+              <ion-select-option value="1.15am">1.15am</ion-select-option>
+              <ion-select-option value="1.30am">1.30am</ion-select-option>
+              <ion-select-option value="1.45am">1.45am</ion-select-option>
+
+              <ion-select-option value="2.00am">2.00am</ion-select-option>
+              <ion-select-option value="2.15am">2.15am</ion-select-option>
+              <ion-select-option value="2.30am">2.30am</ion-select-option>
+              <ion-select-option value="2.45am">2.45am</ion-select-option>
+
+              <ion-select-option value="3.00am">3.00am</ion-select-option>
+              <ion-select-option value="3.15am">3.15am</ion-select-option>
+              <ion-select-option value="3.30am">3.30am</ion-select-option>
+              <ion-select-option value="3.45am">3.45am</ion-select-option>
+
+              <ion-select-option value="4.00am">4.00am</ion-select-option>
+              <ion-select-option value="4.15am">4.15am</ion-select-option>
+              <ion-select-option value="4.30am">4.30am</ion-select-option>
+              <ion-select-option value="4.45am">4.45am</ion-select-option>
+
+              <ion-select-option value="5.00am">5.00am</ion-select-option>
+              <ion-select-option value="5.15am">5.15am</ion-select-option>
+              <ion-select-option value="5.30am">5.30am</ion-select-option>
+              <ion-select-option value="5.45am">5.45am</ion-select-option>
+
+              <ion-select-option value="6.00am">6.00am</ion-select-option>
+              <ion-select-option value="6.15am">6.15am</ion-select-option>
+              <ion-select-option value="6.30am">6.30am</ion-select-option>
+              <ion-select-option value="6.45am">6.45am</ion-select-option>
+
+              <ion-select-option value="7.00am">7.00am</ion-select-option>
+              <ion-select-option value="7.15am">7.15am</ion-select-option>
+              <ion-select-option value="7.30am">7.30am</ion-select-option>
+              <ion-select-option value="7.45am">7.45am</ion-select-option>
+
+              <ion-select-option value="8.00am">8.00am</ion-select-option>
+              <ion-select-option value="8.15am">8.15am</ion-select-option>
+              <ion-select-option value="8.30am">8.30am</ion-select-option>
+              <ion-select-option value="8.45am">8.45am</ion-select-option>
+
+              <ion-select-option value="9.00am">9.00am</ion-select-option>
+              <ion-select-option value="9.15am">9.15am</ion-select-option>
+              <ion-select-option value="9.30am">9.30am</ion-select-option>
+              <ion-select-option value="9.45am">9.45am</ion-select-option>
+
+              <ion-select-option value="10.00am">10.00am</ion-select-option>
+              <ion-select-option value="10.15am">10.15am</ion-select-option>
+              <ion-select-option value="10.30am">10.30am</ion-select-option>
+              <ion-select-option value="10.45am">10.45am</ion-select-option>
+
+              <ion-select-option value="11.00am">11.00am</ion-select-option>
+              <ion-select-option value="11.15am">11.15am</ion-select-option>
+              <ion-select-option value="11.30am">11.30am</ion-select-option>
+              <ion-select-option value="11.45am">11.45am</ion-select-option>
+              <ion-select-option value="closed">closed</ion-select-option>              <ion-select-option value="closed">closed</ion-select-option>
+            </ion-select>
+
+            <ion-select  placeholder="0.00pm" [(ngModel)]="open.pm1">
+              <ion-select-option value="12.00pm">12.00pm</ion-select-option>
+              <ion-select-option value="12.00pm">12.15pm</ion-select-option>
+              <ion-select-option value="12.00pm">12.30pm</ion-select-option>
+              <ion-select-option value="12.00pm">12.45pm</ion-select-option>
+
+              <ion-select-option value="1.00pm">1.00pm</ion-select-option>
+              <ion-select-option value="1.15pm">1.15pm</ion-select-option>
+              <ion-select-option value="1.30pm">1.30pm</ion-select-option>
+              <ion-select-option value="1.45pm">1.45pm</ion-select-option>
+
+              <ion-select-option value="2.00pm">2.00pm</ion-select-option>
+              <ion-select-option value="2.15pm">2.15pm</ion-select-option>
+              <ion-select-option value="2.30pm">2.30pm</ion-select-option>
+              <ion-select-option value="2.45pm">2.45pm</ion-select-option>
+
+              <ion-select-option value="3.00pm">3.00pm</ion-select-option>
+              <ion-select-option value="3.15pm">3.15pm</ion-select-option>
+              <ion-select-option value="3.30pm">3.30pm</ion-select-option>
+              <ion-select-option value="3.45pm">3.45pm</ion-select-option>
+
+              <ion-select-option value="4.00pm">4.00pm</ion-select-option>
+              <ion-select-option value="4.15pm">4.15pm</ion-select-option>
+              <ion-select-option value="4.30pm">4.30pm</ion-select-option>
+              <ion-select-option value="4.45pm">4.45pm</ion-select-option>
+
+              <ion-select-option value="5.00pm">5.00pm</ion-select-option>
+              <ion-select-option value="5.15pm">5.15pm</ion-select-option>
+              <ion-select-option value="5.30pm">5.30pm</ion-select-option>
+              <ion-select-option value="5.45pm">5.45pm</ion-select-option>
+
+              <ion-select-option value="6.00pm">6.00pm</ion-select-option>
+              <ion-select-option value="6.15pm">6.15pm</ion-select-option>
+              <ion-select-option value="6.30pm">6.30pm</ion-select-option>
+              <ion-select-option value="6.45pm">6.45pm</ion-select-option>
+
+              <ion-select-option value="7.00pm">7.00pm</ion-select-option>
+              <ion-select-option value="7.15pm">7.15pm</ion-select-option>
+              <ion-select-option value="7.30pm">7.30pm</ion-select-option>
+              <ion-select-option value="7.45pm">7.45pm</ion-select-option>
+
+              <ion-select-option value="8.00pm">8.00pm</ion-select-option>
+              <ion-select-option value="8.15pm">8.15pm</ion-select-option>
+              <ion-select-option value="8.30pm">8.30pm</ion-select-option>
+              <ion-select-option value="8.45pm">8.45pm</ion-select-option>
+
+              <ion-select-option value="9.00pm">9.00pm</ion-select-option>
+              <ion-select-option value="9.15pm">9.15pm</ion-select-option>
+              <ion-select-option value="9.30pm">9.30pm</ion-select-option>
+              <ion-select-option value="9.45pm">9.45pm</ion-select-option>
+
+              <ion-select-option value="10.00pm">10.00pm</ion-select-option>
+              <ion-select-option value="10.15pm">10.15pm</ion-select-option>
+              <ion-select-option value="10.30pm">10.30pm</ion-select-option>
+              <ion-select-option value="10.45pm">10.45pm</ion-select-option>
+
+              <ion-select-option value="11.00pm">11.00pm</ion-select-option>
+              <ion-select-option value="11.15pm">11.15pm</ion-select-option>
+              <ion-select-option value="11.30pm">11.30pm</ion-select-option>
+              <ion-select-option value="11.45pm">11.45pm</ion-select-option>
+            </ion-select>
+          </ion-input>
+          
+          <ion-input>
+            <ion-item>
+              <ion-label>wednesday</ion-label>
+              <ion-checkbox color="primary" slot="start" [(ngModel)]="open.wednesday"></ion-checkbox>
+            </ion-item> 
+            <ion-select slot="end"  placeholder="0.00am" [(ngModel)]="open.am2">
+              <ion-select-option value="12.00am">12.00am</ion-select-option>
+              <ion-select-option value="12.00am">12.15am</ion-select-option>
+              <ion-select-option value="12.00am">12.30am</ion-select-option>
+              <ion-select-option value="12.00am">12.45am</ion-select-option>
+
+              <ion-select-option value="1.00am">1.00am</ion-select-option>
+              <ion-select-option value="1.15am">1.15am</ion-select-option>
+              <ion-select-option value="1.30am">1.30am</ion-select-option>
+              <ion-select-option value="1.45am">1.45am</ion-select-option>
+
+              <ion-select-option value="2.00am">2.00am</ion-select-option>
+              <ion-select-option value="2.15am">2.15am</ion-select-option>
+              <ion-select-option value="2.30am">2.30am</ion-select-option>
+              <ion-select-option value="2.45am">2.45am</ion-select-option>
+
+              <ion-select-option value="3.00am">3.00am</ion-select-option>
+              <ion-select-option value="3.15am">3.15am</ion-select-option>
+              <ion-select-option value="3.30am">3.30am</ion-select-option>
+              <ion-select-option value="3.45am">3.45am</ion-select-option>
+
+              <ion-select-option value="4.00am">4.00am</ion-select-option>
+              <ion-select-option value="4.15am">4.15am</ion-select-option>
+              <ion-select-option value="4.30am">4.30am</ion-select-option>
+              <ion-select-option value="4.45am">4.45am</ion-select-option>
+
+              <ion-select-option value="5.00am">5.00am</ion-select-option>
+              <ion-select-option value="5.15am">5.15am</ion-select-option>
+              <ion-select-option value="5.30am">5.30am</ion-select-option>
+              <ion-select-option value="5.45am">5.45am</ion-select-option>
+
+              <ion-select-option value="6.00am">6.00am</ion-select-option>
+              <ion-select-option value="6.15am">6.15am</ion-select-option>
+              <ion-select-option value="6.30am">6.30am</ion-select-option>
+              <ion-select-option value="6.45am">6.45am</ion-select-option>
+
+              <ion-select-option value="7.00am">7.00am</ion-select-option>
+              <ion-select-option value="7.15am">7.15am</ion-select-option>
+              <ion-select-option value="7.30am">7.30am</ion-select-option>
+              <ion-select-option value="7.45am">7.45am</ion-select-option>
+
+              <ion-select-option value="8.00am">8.00am</ion-select-option>
+              <ion-select-option value="8.15am">8.15am</ion-select-option>
+              <ion-select-option value="8.30am">8.30am</ion-select-option>
+              <ion-select-option value="8.45am">8.45am</ion-select-option>
+
+              <ion-select-option value="9.00am">9.00am</ion-select-option>
+              <ion-select-option value="9.15am">9.15am</ion-select-option>
+              <ion-select-option value="9.30am">9.30am</ion-select-option>
+              <ion-select-option value="9.45am">9.45am</ion-select-option>
+
+              <ion-select-option value="10.00am">10.00am</ion-select-option>
+              <ion-select-option value="10.15am">10.15am</ion-select-option>
+              <ion-select-option value="10.30am">10.30am</ion-select-option>
+              <ion-select-option value="10.45am">10.45am</ion-select-option>
+
+              <ion-select-option value="11.00am">11.00am</ion-select-option>
+              <ion-select-option value="11.15am">11.15am</ion-select-option>
+              <ion-select-option value="11.30am">11.30am</ion-select-option>
+              <ion-select-option value="11.45am">11.45am</ion-select-option>
+              <ion-select-option value="closed">closed</ion-select-option> 
+            </ion-select>
+
+            <ion-select [(ngModel)]="open.pm2"  placeholder="0.00pm">
+                <ion-select-option value="12.00pm">12.00pm</ion-select-option>
+                <ion-select-option value="12.00pm">12.15pm</ion-select-option>
+                <ion-select-option value="12.00pm">12.30pm</ion-select-option>
+                <ion-select-option value="12.00pm">12.45pm</ion-select-option>
+  
+                <ion-select-option value="1.00pm">1.00pm</ion-select-option>
+                <ion-select-option value="1.15pm">1.15pm</ion-select-option>
+                <ion-select-option value="1.30pm">1.30pm</ion-select-option>
+                <ion-select-option value="1.45pm">1.45pm</ion-select-option>
+  
+                <ion-select-option value="2.00pm">2.00pm</ion-select-option>
+                <ion-select-option value="2.15pm">2.15pm</ion-select-option>
+                <ion-select-option value="2.30pm">2.30pm</ion-select-option>
+                <ion-select-option value="2.45pm">2.45pm</ion-select-option>
+  
+                <ion-select-option value="3.00pm">3.00pm</ion-select-option>
+                <ion-select-option value="3.15pm">3.15pm</ion-select-option>
+                <ion-select-option value="3.30pm">3.30pm</ion-select-option>
+                <ion-select-option value="3.45pm">3.45pm</ion-select-option>
+  
+                <ion-select-option value="4.00pm">4.00pm</ion-select-option>
+                <ion-select-option value="4.15pm">4.15pm</ion-select-option>
+                <ion-select-option value="4.30pm">4.30pm</ion-select-option>
+                <ion-select-option value="4.45pm">4.45pm</ion-select-option>
+  
+                <ion-select-option value="5.00pm">5.00pm</ion-select-option>
+                <ion-select-option value="5.15pm">5.15pm</ion-select-option>
+                <ion-select-option value="5.30pm">5.30pm</ion-select-option>
+                <ion-select-option value="5.45pm">5.45pm</ion-select-option>
+  
+                <ion-select-option value="6.00pm">6.00pm</ion-select-option>
+                <ion-select-option value="6.15pm">6.15pm</ion-select-option>
+                <ion-select-option value="6.30pm">6.30pm</ion-select-option>
+                <ion-select-option value="6.45pm">6.45pm</ion-select-option>
+  
+                <ion-select-option value="7.00pm">7.00pm</ion-select-option>
+                <ion-select-option value="7.15pm">7.15pm</ion-select-option>
+                <ion-select-option value="7.30pm">7.30pm</ion-select-option>
+                <ion-select-option value="7.45pm">7.45pm</ion-select-option>
+  
+                <ion-select-option value="8.00pm">8.00pm</ion-select-option>
+                <ion-select-option value="8.15pm">8.15pm</ion-select-option>
+                <ion-select-option value="8.30pm">8.30pm</ion-select-option>
+                <ion-select-option value="8.45pm">8.45pm</ion-select-option>
+  
+                <ion-select-option value="9.00pm">9.00pm</ion-select-option>
+                <ion-select-option value="9.15pm">9.15pm</ion-select-option>
+                <ion-select-option value="9.30pm">9.30pm</ion-select-option>
+                <ion-select-option value="9.45pm">9.45pm</ion-select-option>
+  
+                <ion-select-option value="10.00pm">10.00pm</ion-select-option>
+                <ion-select-option value="10.15pm">10.15pm</ion-select-option>
+                <ion-select-option value="10.30pm">10.30pm</ion-select-option>
+                <ion-select-option value="10.45pm">10.45pm</ion-select-option>
+  
+                <ion-select-option value="11.00pm">11.00pm</ion-select-option>
+                <ion-select-option value="11.15pm">11.15pm</ion-select-option>
+                <ion-select-option value="11.30pm">11.30pm</ion-select-option>
+                <ion-select-option value="11.45pm">11.45pm</ion-select-option>
+            </ion-select>
+          </ion-input>
+
+          <ion-input>
+            <ion-item>
+              <ion-label>Thursday</ion-label>
+              <ion-checkbox color="primary" slot="start" [(ngModel)]="open.thursday"></ion-checkbox>
+            </ion-item>
+            <ion-select slot="end"  placeholder="0.00am" [(ngModel)]="open.am3">
+              <ion-select-option value="12.00am">12.00am</ion-select-option>
+              <ion-select-option value="12.00am">12.15am</ion-select-option>
+              <ion-select-option value="12.00am">12.30am</ion-select-option>
+              <ion-select-option value="12.00am">12.45am</ion-select-option>
+
+              <ion-select-option value="1.00am">1.00am</ion-select-option>
+              <ion-select-option value="1.15am">1.15am</ion-select-option>
+              <ion-select-option value="1.30am">1.30am</ion-select-option>
+              <ion-select-option value="1.45am">1.45am</ion-select-option>
+
+              <ion-select-option value="2.00am">2.00am</ion-select-option>
+              <ion-select-option value="2.15am">2.15am</ion-select-option>
+              <ion-select-option value="2.30am">2.30am</ion-select-option>
+              <ion-select-option value="2.45am">2.45am</ion-select-option>
+
+              <ion-select-option value="3.00am">3.00am</ion-select-option>
+              <ion-select-option value="3.15am">3.15am</ion-select-option>
+              <ion-select-option value="3.30am">3.30am</ion-select-option>
+              <ion-select-option value="3.45am">3.45am</ion-select-option>
+
+              <ion-select-option value="4.00am">4.00am</ion-select-option>
+              <ion-select-option value="4.15am">4.15am</ion-select-option>
+              <ion-select-option value="4.30am">4.30am</ion-select-option>
+              <ion-select-option value="4.45am">4.45am</ion-select-option>
+
+              <ion-select-option value="5.00am">5.00am</ion-select-option>
+              <ion-select-option value="5.15am">5.15am</ion-select-option>
+              <ion-select-option value="5.30am">5.30am</ion-select-option>
+              <ion-select-option value="5.45am">5.45am</ion-select-option>
+
+              <ion-select-option value="6.00am">6.00am</ion-select-option>
+              <ion-select-option value="6.15am">6.15am</ion-select-option>
+              <ion-select-option value="6.30am">6.30am</ion-select-option>
+              <ion-select-option value="6.45am">6.45am</ion-select-option>
+
+              <ion-select-option value="7.00am">7.00am</ion-select-option>
+              <ion-select-option value="7.15am">7.15am</ion-select-option>
+              <ion-select-option value="7.30am">7.30am</ion-select-option>
+              <ion-select-option value="7.45am">7.45am</ion-select-option>
+
+              <ion-select-option value="8.00am">8.00am</ion-select-option>
+              <ion-select-option value="8.15am">8.15am</ion-select-option>
+              <ion-select-option value="8.30am">8.30am</ion-select-option>
+              <ion-select-option value="8.45am">8.45am</ion-select-option>
+
+              <ion-select-option value="9.00am">9.00am</ion-select-option>
+              <ion-select-option value="9.15am">9.15am</ion-select-option>
+              <ion-select-option value="9.30am">9.30am</ion-select-option>
+              <ion-select-option value="9.45am">9.45am</ion-select-option>
+
+              <ion-select-option value="10.00am">10.00am</ion-select-option>
+              <ion-select-option value="10.15am">10.15am</ion-select-option>
+              <ion-select-option value="10.30am">10.30am</ion-select-option>
+              <ion-select-option value="10.45am">10.45am</ion-select-option>
+
+              <ion-select-option value="11.00am">11.00am</ion-select-option>
+              <ion-select-option value="11.15am">11.15am</ion-select-option>
+              <ion-select-option value="11.30am">11.30am</ion-select-option>
+              <ion-select-option value="11.45am">11.45am</ion-select-option>
+              <ion-select-option value="closed">closed</ion-select-option>
+            </ion-select>   
+            
+            <ion-select [(ngModel)]="open.pm3"  placeholder="0.00pm">
+              <ion-select-option value="12.00pm">12.00pm</ion-select-option>
+              <ion-select-option value="12.00pm">12.15pm</ion-select-option>
+              <ion-select-option value="12.00pm">12.30pm</ion-select-option>
+              <ion-select-option value="12.00pm">12.45pm</ion-select-option>
+
+              <ion-select-option value="1.00pm">1.00pm</ion-select-option>
+              <ion-select-option value="1.15pm">1.15pm</ion-select-option>
+              <ion-select-option value="1.30pm">1.30pm</ion-select-option>
+              <ion-select-option value="1.45pm">1.45pm</ion-select-option>
+
+              <ion-select-option value="2.00pm">2.00pm</ion-select-option>
+              <ion-select-option value="2.15pm">2.15pm</ion-select-option>
+              <ion-select-option value="2.30pm">2.30pm</ion-select-option>
+              <ion-select-option value="2.45pm">2.45pm</ion-select-option>
+
+              <ion-select-option value="3.00pm">3.00pm</ion-select-option>
+              <ion-select-option value="3.15pm">3.15pm</ion-select-option>
+              <ion-select-option value="3.30pm">3.30pm</ion-select-option>
+              <ion-select-option value="3.45pm">3.45pm</ion-select-option>
+
+              <ion-select-option value="4.00pm">4.00pm</ion-select-option>
+              <ion-select-option value="4.15pm">4.15pm</ion-select-option>
+              <ion-select-option value="4.30pm">4.30pm</ion-select-option>
+              <ion-select-option value="4.45pm">4.45pm</ion-select-option>
+
+              <ion-select-option value="5.00pm">5.00pm</ion-select-option>
+              <ion-select-option value="5.15pm">5.15pm</ion-select-option>
+              <ion-select-option value="5.30pm">5.30pm</ion-select-option>
+              <ion-select-option value="5.45pm">5.45pm</ion-select-option>
+
+              <ion-select-option value="6.00pm">6.00pm</ion-select-option>
+              <ion-select-option value="6.15pm">6.15pm</ion-select-option>
+              <ion-select-option value="6.30pm">6.30pm</ion-select-option>
+              <ion-select-option value="6.45pm">6.45pm</ion-select-option>
+
+              <ion-select-option value="7.00pm">7.00pm</ion-select-option>
+              <ion-select-option value="7.15pm">7.15pm</ion-select-option>
+              <ion-select-option value="7.30pm">7.30pm</ion-select-option>
+              <ion-select-option value="7.45pm">7.45pm</ion-select-option>
+
+              <ion-select-option value="8.00pm">8.00pm</ion-select-option>
+              <ion-select-option value="8.15pm">8.15pm</ion-select-option>
+              <ion-select-option value="8.30pm">8.30pm</ion-select-option>
+              <ion-select-option value="8.45pm">8.45pm</ion-select-option>
+
+              <ion-select-option value="9.00pm">9.00pm</ion-select-option>
+              <ion-select-option value="9.15pm">9.15pm</ion-select-option>
+              <ion-select-option value="9.30pm">9.30pm</ion-select-option>
+              <ion-select-option value="9.45pm">9.45pm</ion-select-option>
+
+              <ion-select-option value="10.00pm">10.00pm</ion-select-option>
+              <ion-select-option value="10.15pm">10.15pm</ion-select-option>
+              <ion-select-option value="10.30pm">10.30pm</ion-select-option>
+              <ion-select-option value="10.45pm">10.45pm</ion-select-option>
+
+              <ion-select-option value="11.00pm">11.00pm</ion-select-option>
+              <ion-select-option value="11.15pm">11.15pm</ion-select-option>
+              <ion-select-option value="11.30pm">11.30pm</ion-select-option>
+              <ion-select-option value="11.45pm">11.45pm</ion-select-option>
+            </ion-select>
+             </ion-input>
+
+          <ion-input>
+            <ion-item>
+              <ion-label>Friday</ion-label>
+              <ion-checkbox color="primary" slot="start" [(ngModel)]="open.friday"></ion-checkbox>
+            </ion-item>
+            <ion-select slot="end"  placeholder="0.00am" [(ngModel)]="open.am4">
+              <ion-select-option value="12.00am">12.00am</ion-select-option>
+              <ion-select-option value="12.00am">12.15am</ion-select-option>
+              <ion-select-option value="12.00am">12.30am</ion-select-option>
+              <ion-select-option value="12.00am">12.45am</ion-select-option>
+
+              <ion-select-option value="1.00am">1.00am</ion-select-option>
+              <ion-select-option value="1.15am">1.15am</ion-select-option>
+              <ion-select-option value="1.30am">1.30am</ion-select-option>
+              <ion-select-option value="1.45am">1.45am</ion-select-option>
+
+              <ion-select-option value="2.00am">2.00am</ion-select-option>
+              <ion-select-option value="2.15am">2.15am</ion-select-option>
+              <ion-select-option value="2.30am">2.30am</ion-select-option>
+              <ion-select-option value="2.45am">2.45am</ion-select-option>
+
+              <ion-select-option value="3.00am">3.00am</ion-select-option>
+              <ion-select-option value="3.15am">3.15am</ion-select-option>
+              <ion-select-option value="3.30am">3.30am</ion-select-option>
+              <ion-select-option value="3.45am">3.45am</ion-select-option>
+
+              <ion-select-option value="4.00am">4.00am</ion-select-option>
+              <ion-select-option value="4.15am">4.15am</ion-select-option>
+              <ion-select-option value="4.30am">4.30am</ion-select-option>
+              <ion-select-option value="4.45am">4.45am</ion-select-option>
+
+              <ion-select-option value="5.00am">5.00am</ion-select-option>
+              <ion-select-option value="5.15am">5.15am</ion-select-option>
+              <ion-select-option value="5.30am">5.30am</ion-select-option>
+              <ion-select-option value="5.45am">5.45am</ion-select-option>
+
+              <ion-select-option value="6.00am">6.00am</ion-select-option>
+              <ion-select-option value="6.15am">6.15am</ion-select-option>
+              <ion-select-option value="6.30am">6.30am</ion-select-option>
+              <ion-select-option value="6.45am">6.45am</ion-select-option>
+
+              <ion-select-option value="7.00am">7.00am</ion-select-option>
+              <ion-select-option value="7.15am">7.15am</ion-select-option>
+              <ion-select-option value="7.30am">7.30am</ion-select-option>
+              <ion-select-option value="7.45am">7.45am</ion-select-option>
+
+              <ion-select-option value="8.00am">8.00am</ion-select-option>
+              <ion-select-option value="8.15am">8.15am</ion-select-option>
+              <ion-select-option value="8.30am">8.30am</ion-select-option>
+              <ion-select-option value="8.45am">8.45am</ion-select-option>
+
+              <ion-select-option value="9.00am">9.00am</ion-select-option>
+              <ion-select-option value="9.15am">9.15am</ion-select-option>
+              <ion-select-option value="9.30am">9.30am</ion-select-option>
+              <ion-select-option value="9.45am">9.45am</ion-select-option>
+
+              <ion-select-option value="10.00am">10.00am</ion-select-option>
+              <ion-select-option value="10.15am">10.15am</ion-select-option>
+              <ion-select-option value="10.30am">10.30am</ion-select-option>
+              <ion-select-option value="10.45am">10.45am</ion-select-option>
+
+              <ion-select-option value="11.00am">11.00am</ion-select-option>
+              <ion-select-option value="11.15am">11.15am</ion-select-option>
+              <ion-select-option value="11.30am">11.30am</ion-select-option>
+              <ion-select-option value="11.45am">11.45am</ion-select-option>
+              <ion-select-option value="closed">closed</ion-select-option>
+            </ion-select>   
+            
+            <ion-select  placeholder="0.00pm" [(ngModel)]="open.pm4">
+              <ion-select-option value="12.00pm">12.00pm</ion-select-option>
+              <ion-select-option value="12.00pm">12.15pm</ion-select-option>
+              <ion-select-option value="12.00pm">12.30pm</ion-select-option>
+              <ion-select-option value="12.00pm">12.45pm</ion-select-option>
+
+              <ion-select-option value="1.00pm">1.00pm</ion-select-option>
+              <ion-select-option value="1.15pm">1.15pm</ion-select-option>
+              <ion-select-option value="1.30pm">1.30pm</ion-select-option>
+              <ion-select-option value="1.45pm">1.45pm</ion-select-option>
+
+              <ion-select-option value="2.00pm">2.00pm</ion-select-option>
+              <ion-select-option value="2.15pm">2.15pm</ion-select-option>
+              <ion-select-option value="2.30pm">2.30pm</ion-select-option>
+              <ion-select-option value="2.45pm">2.45pm</ion-select-option>
+
+              <ion-select-option value="3.00pm">3.00pm</ion-select-option>
+              <ion-select-option value="3.15pm">3.15pm</ion-select-option>
+              <ion-select-option value="3.30pm">3.30pm</ion-select-option>
+              <ion-select-option value="3.45pm">3.45pm</ion-select-option>
+
+              <ion-select-option value="4.00pm">4.00pm</ion-select-option>
+              <ion-select-option value="4.15pm">4.15pm</ion-select-option>
+              <ion-select-option value="4.30pm">4.30pm</ion-select-option>
+              <ion-select-option value="4.45pm">4.45pm</ion-select-option>
+
+              <ion-select-option value="5.00pm">5.00pm</ion-select-option>
+              <ion-select-option value="5.15pm">5.15pm</ion-select-option>
+              <ion-select-option value="5.30pm">5.30pm</ion-select-option>
+              <ion-select-option value="5.45pm">5.45pm</ion-select-option>
+
+              <ion-select-option value="6.00pm">6.00pm</ion-select-option>
+              <ion-select-option value="6.15pm">6.15pm</ion-select-option>
+              <ion-select-option value="6.30pm">6.30pm</ion-select-option>
+              <ion-select-option value="6.45pm">6.45pm</ion-select-option>
+
+              <ion-select-option value="7.00pm">7.00pm</ion-select-option>
+              <ion-select-option value="7.15pm">7.15pm</ion-select-option>
+              <ion-select-option value="7.30pm">7.30pm</ion-select-option>
+              <ion-select-option value="7.45pm">7.45pm</ion-select-option>
+
+              <ion-select-option value="8.00pm">8.00pm</ion-select-option>
+              <ion-select-option value="8.15pm">8.15pm</ion-select-option>
+              <ion-select-option value="8.30pm">8.30pm</ion-select-option>
+              <ion-select-option value="8.45pm">8.45pm</ion-select-option>
+
+              <ion-select-option value="9.00pm">9.00pm</ion-select-option>
+              <ion-select-option value="9.15pm">9.15pm</ion-select-option>
+              <ion-select-option value="9.30pm">9.30pm</ion-select-option>
+              <ion-select-option value="9.45pm">9.45pm</ion-select-option>
+
+              <ion-select-option value="10.00pm">10.00pm</ion-select-option>
+              <ion-select-option value="10.15pm">10.15pm</ion-select-option>
+              <ion-select-option value="10.30pm">10.30pm</ion-select-option>
+              <ion-select-option value="10.45pm">10.45pm</ion-select-option>
+
+              <ion-select-option value="11.00pm">11.00pm</ion-select-option>
+              <ion-select-option value="11.15pm">11.15pm</ion-select-option>
+              <ion-select-option value="11.30pm">11.30pm</ion-select-option>
+              <ion-select-option value="11.45pm">11.45pm</ion-select-option>
+            </ion-select>         
+          </ion-input>
+
+          <ion-input>
+            <ion-item>
+              <ion-label>saturday</ion-label>
+              <ion-checkbox color="primary" slot="start" [(ngModel)]="open.saturday"></ion-checkbox>
+            </ion-item>
+            <ion-select slot="end"  placeholder="0.00am" [(ngModel)]="open.am5">
+              <ion-select-option value="12.00am">12.00am</ion-select-option>
+              <ion-select-option value="12.00am">12.15am</ion-select-option>
+              <ion-select-option value="12.00am">12.30am</ion-select-option>
+              <ion-select-option value="12.00am">12.45am</ion-select-option>
+
+              <ion-select-option value="1.00am">1.00am</ion-select-option>
+              <ion-select-option value="1.15am">1.15am</ion-select-option>
+              <ion-select-option value="1.30am">1.30am</ion-select-option>
+              <ion-select-option value="1.45am">1.45am</ion-select-option>
+
+              <ion-select-option value="2.00am">2.00am</ion-select-option>
+              <ion-select-option value="2.15am">2.15am</ion-select-option>
+              <ion-select-option value="2.30am">2.30am</ion-select-option>
+              <ion-select-option value="2.45am">2.45am</ion-select-option>
+
+              <ion-select-option value="3.00am">3.00am</ion-select-option>
+              <ion-select-option value="3.15am">3.15am</ion-select-option>
+              <ion-select-option value="3.30am">3.30am</ion-select-option>
+              <ion-select-option value="3.45am">3.45am</ion-select-option>
+
+              <ion-select-option value="4.00am">4.00am</ion-select-option>
+              <ion-select-option value="4.15am">4.15am</ion-select-option>
+              <ion-select-option value="4.30am">4.30am</ion-select-option>
+              <ion-select-option value="4.45am">4.45am</ion-select-option>
+
+              <ion-select-option value="5.00am">5.00am</ion-select-option>
+              <ion-select-option value="5.15am">5.15am</ion-select-option>
+              <ion-select-option value="5.30am">5.30am</ion-select-option>
+              <ion-select-option value="5.45am">5.45am</ion-select-option>
+
+              <ion-select-option value="6.00am">6.00am</ion-select-option>
+              <ion-select-option value="6.15am">6.15am</ion-select-option>
+              <ion-select-option value="6.30am">6.30am</ion-select-option>
+              <ion-select-option value="6.45am">6.45am</ion-select-option>
+
+              <ion-select-option value="7.00am">7.00am</ion-select-option>
+              <ion-select-option value="7.15am">7.15am</ion-select-option>
+              <ion-select-option value="7.30am">7.30am</ion-select-option>
+              <ion-select-option value="7.45am">7.45am</ion-select-option>
+
+              <ion-select-option value="8.00am">8.00am</ion-select-option>
+              <ion-select-option value="8.15am">8.15am</ion-select-option>
+              <ion-select-option value="8.30am">8.30am</ion-select-option>
+              <ion-select-option value="8.45am">8.45am</ion-select-option>
+
+              <ion-select-option value="9.00am">9.00am</ion-select-option>
+              <ion-select-option value="9.15am">9.15am</ion-select-option>
+              <ion-select-option value="9.30am">9.30am</ion-select-option>
+              <ion-select-option value="9.45am">9.45am</ion-select-option>
+
+              <ion-select-option value="10.00am">10.00am</ion-select-option>
+              <ion-select-option value="10.15am">10.15am</ion-select-option>
+              <ion-select-option value="10.30am">10.30am</ion-select-option>
+              <ion-select-option value="10.45am">10.45am</ion-select-option>
+
+              <ion-select-option value="11.00am">11.00am</ion-select-option>
+              <ion-select-option value="11.15am">11.15am</ion-select-option>
+              <ion-select-option value="11.30am">11.30am</ion-select-option>
+              <ion-select-option value="11.45am">11.45am</ion-select-option>
+              <ion-select-option value="closed">closed</ion-select-option>
+            </ion-select>   
+            
+            <ion-select [(ngModel)]="open.pm5"  placeholder="0.00pm">
+              <ion-select-option value="12.00pm">12.00pm</ion-select-option>
+              <ion-select-option value="12.00pm">12.15pm</ion-select-option>
+              <ion-select-option value="12.00pm">12.30pm</ion-select-option>
+              <ion-select-option value="12.00pm">12.45pm</ion-select-option>
+
+              <ion-select-option value="1.00pm">1.00pm</ion-select-option>
+              <ion-select-option value="1.15pm">1.15pm</ion-select-option>
+              <ion-select-option value="1.30pm">1.30pm</ion-select-option>
+              <ion-select-option value="1.45pm">1.45pm</ion-select-option>
+
+              <ion-select-option value="2.00pm">2.00pm</ion-select-option>
+              <ion-select-option value="2.15pm">2.15pm</ion-select-option>
+              <ion-select-option value="2.30pm">2.30pm</ion-select-option>
+              <ion-select-option value="2.45pm">2.45pm</ion-select-option>
+
+              <ion-select-option value="3.00pm">3.00pm</ion-select-option>
+              <ion-select-option value="3.15pm">3.15pm</ion-select-option>
+              <ion-select-option value="3.30pm">3.30pm</ion-select-option>
+              <ion-select-option value="3.45pm">3.45pm</ion-select-option>
+
+              <ion-select-option value="4.00pm">4.00pm</ion-select-option>
+              <ion-select-option value="4.15pm">4.15pm</ion-select-option>
+              <ion-select-option value="4.30pm">4.30pm</ion-select-option>
+              <ion-select-option value="4.45pm">4.45pm</ion-select-option>
+
+              <ion-select-option value="5.00pm">5.00pm</ion-select-option>
+              <ion-select-option value="5.15pm">5.15pm</ion-select-option>
+              <ion-select-option value="5.30pm">5.30pm</ion-select-option>
+              <ion-select-option value="5.45pm">5.45pm</ion-select-option>
+
+              <ion-select-option value="6.00pm">6.00pm</ion-select-option>
+              <ion-select-option value="6.15pm">6.15pm</ion-select-option>
+              <ion-select-option value="6.30pm">6.30pm</ion-select-option>
+              <ion-select-option value="6.45pm">6.45pm</ion-select-option>
+
+              <ion-select-option value="7.00pm">7.00pm</ion-select-option>
+              <ion-select-option value="7.15pm">7.15pm</ion-select-option>
+              <ion-select-option value="7.30pm">7.30pm</ion-select-option>
+              <ion-select-option value="7.45pm">7.45pm</ion-select-option>
+
+              <ion-select-option value="8.00pm">8.00pm</ion-select-option>
+              <ion-select-option value="8.15pm">8.15pm</ion-select-option>
+              <ion-select-option value="8.30pm">8.30pm</ion-select-option>
+              <ion-select-option value="8.45pm">8.45pm</ion-select-option>
+
+              <ion-select-option value="9.00pm">9.00pm</ion-select-option>
+              <ion-select-option value="9.15pm">9.15pm</ion-select-option>
+              <ion-select-option value="9.30pm">9.30pm</ion-select-option>
+              <ion-select-option value="9.45pm">9.45pm</ion-select-option>
+
+              <ion-select-option value="10.00pm">10.00pm</ion-select-option>
+              <ion-select-option value="10.15pm">10.15pm</ion-select-option>
+              <ion-select-option value="10.30pm">10.30pm</ion-select-option>
+              <ion-select-option value="10.45pm">10.45pm</ion-select-option>
+
+              <ion-select-option value="11.00pm">11.00pm</ion-select-option>
+              <ion-select-option value="11.15pm">11.15pm</ion-select-option>
+              <ion-select-option value="11.30pm">11.30pm</ion-select-option>
+              <ion-select-option value="11.45pm">11.45pm</ion-select-option>
+            </ion-select>
+          </ion-input>
+
+          <ion-input>
+            <ion-item>
+              <ion-label>sunday</ion-label>
+              <ion-checkbox color="primary" slot="start" [(ngModel)]="open.sunday"></ion-checkbox>
+            </ion-item>
+            <ion-select slot="end" [(ngModel)]="open.am6"  placeholder="0.00am">
+              <ion-select-option value="12.00am">12.00am</ion-select-option>
+              <ion-select-option value="12.00am">12.15am</ion-select-option>
+              <ion-select-option value="12.00am">12.30am</ion-select-option>
+              <ion-select-option value="12.00am">12.45am</ion-select-option>
+
+              <ion-select-option value="1.00am">1.00am</ion-select-option>
+              <ion-select-option value="1.15am">1.15am</ion-select-option>
+              <ion-select-option value="1.30am">1.30am</ion-select-option>
+              <ion-select-option value="1.45am">1.45am</ion-select-option>
+
+              <ion-select-option value="2.00am">2.00am</ion-select-option>
+              <ion-select-option value="2.15am">2.15am</ion-select-option>
+              <ion-select-option value="2.30am">2.30am</ion-select-option>
+              <ion-select-option value="2.45am">2.45am</ion-select-option>
+
+              <ion-select-option value="3.00am">3.00am</ion-select-option>
+              <ion-select-option value="3.15am">3.15am</ion-select-option>
+              <ion-select-option value="3.30am">3.30am</ion-select-option>
+              <ion-select-option value="3.45am">3.45am</ion-select-option>
+
+              <ion-select-option value="4.00am">4.00am</ion-select-option>
+              <ion-select-option value="4.15am">4.15am</ion-select-option>
+              <ion-select-option value="4.30am">4.30am</ion-select-option>
+              <ion-select-option value="4.45am">4.45am</ion-select-option>
+
+              <ion-select-option value="5.00am">5.00am</ion-select-option>
+              <ion-select-option value="5.15am">5.15am</ion-select-option>
+              <ion-select-option value="5.30am">5.30am</ion-select-option>
+              <ion-select-option value="5.45am">5.45am</ion-select-option>
+
+              <ion-select-option value="6.00am">6.00am</ion-select-option>
+              <ion-select-option value="6.15am">6.15am</ion-select-option>
+              <ion-select-option value="6.30am">6.30am</ion-select-option>
+              <ion-select-option value="6.45am">6.45am</ion-select-option>
+
+              <ion-select-option value="7.00am">7.00am</ion-select-option>
+              <ion-select-option value="7.15am">7.15am</ion-select-option>
+              <ion-select-option value="7.30am">7.30am</ion-select-option>
+              <ion-select-option value="7.45am">7.45am</ion-select-option>
+
+              <ion-select-option value="8.00am">8.00am</ion-select-option>
+              <ion-select-option value="8.15am">8.15am</ion-select-option>
+              <ion-select-option value="8.30am">8.30am</ion-select-option>
+              <ion-select-option value="8.45am">8.45am</ion-select-option>
+
+              <ion-select-option value="9.00am">9.00am</ion-select-option>
+              <ion-select-option value="9.15am">9.15am</ion-select-option>
+              <ion-select-option value="9.30am">9.30am</ion-select-option>
+              <ion-select-option value="9.45am">9.45am</ion-select-option>
+
+              <ion-select-option value="10.00am">10.00am</ion-select-option>
+              <ion-select-option value="10.15am">10.15am</ion-select-option>
+              <ion-select-option value="10.30am">10.30am</ion-select-option>
+              <ion-select-option value="10.45am">10.45am</ion-select-option>
+
+              <ion-select-option value="11.00am">11.00am</ion-select-option>
+              <ion-select-option value="11.15am">11.15am</ion-select-option>
+              <ion-select-option value="11.30am">11.30am</ion-select-option>
+              <ion-select-option value="11.45am">11.45am</ion-select-option>
+              <ion-select-option value="closed">closed</ion-select-option>
+            </ion-select>   
+            
+            <ion-select [(ngModel)]="open.pm6"  placeholder="0.00pm">
+              <ion-select-option value="12.00pm">12.00pm</ion-select-option>
+              <ion-select-option value="12.00pm">12.15pm</ion-select-option>
+              <ion-select-option value="12.00pm">12.30pm</ion-select-option>
+              <ion-select-option value="12.00pm">12.45pm</ion-select-option>
+
+              <ion-select-option value="1.00pm">1.00pm</ion-select-option>
+              <ion-select-option value="1.15pm">1.15pm</ion-select-option>
+              <ion-select-option value="1.30pm">1.30pm</ion-select-option>
+              <ion-select-option value="1.45pm">1.45pm</ion-select-option>
+
+              <ion-select-option value="2.00pm">2.00pm</ion-select-option>
+              <ion-select-option value="2.15pm">2.15pm</ion-select-option>
+              <ion-select-option value="2.30pm">2.30pm</ion-select-option>
+              <ion-select-option value="2.45pm">2.45pm</ion-select-option>
+
+              <ion-select-option value="3.00pm">3.00pm</ion-select-option>
+              <ion-select-option value="3.15pm">3.15pm</ion-select-option>
+              <ion-select-option value="3.30pm">3.30pm</ion-select-option>
+              <ion-select-option value="3.45pm">3.45pm</ion-select-option>
+
+              <ion-select-option value="4.00pm">4.00pm</ion-select-option>
+              <ion-select-option value="4.15pm">4.15pm</ion-select-option>
+              <ion-select-option value="4.30pm">4.30pm</ion-select-option>
+              <ion-select-option value="4.45pm">4.45pm</ion-select-option>
+
+              <ion-select-option value="5.00pm">5.00pm</ion-select-option>
+              <ion-select-option value="5.15pm">5.15pm</ion-select-option>
+              <ion-select-option value="5.30pm">5.30pm</ion-select-option>
+              <ion-select-option value="5.45pm">5.45pm</ion-select-option>
+
+              <ion-select-option value="6.00pm">6.00pm</ion-select-option>
+              <ion-select-option value="6.15pm">6.15pm</ion-select-option>
+              <ion-select-option value="6.30pm">6.30pm</ion-select-option>
+              <ion-select-option value="6.45pm">6.45pm</ion-select-option>
+
+              <ion-select-option value="7.00pm">7.00pm</ion-select-option>
+              <ion-select-option value="7.15pm">7.15pm</ion-select-option>
+              <ion-select-option value="7.30pm">7.30pm</ion-select-option>
+              <ion-select-option value="7.45pm">7.45pm</ion-select-option>
+
+              <ion-select-option value="8.00pm">8.00pm</ion-select-option>
+              <ion-select-option value="8.15pm">8.15pm</ion-select-option>
+              <ion-select-option value="8.30pm">8.30pm</ion-select-option>
+              <ion-select-option value="8.45pm">8.45pm</ion-select-option>
+
+              <ion-select-option value="9.00pm">9.00pm</ion-select-option>
+              <ion-select-option value="9.15pm">9.15pm</ion-select-option>
+              <ion-select-option value="9.30pm">9.30pm</ion-select-option>
+              <ion-select-option value="9.45pm">9.45pm</ion-select-option>
+
+              <ion-select-option value="10.00pm">10.00pm</ion-select-option>
+              <ion-select-option value="10.15pm">10.15pm</ion-select-option>
+              <ion-select-option value="10.30pm">10.30pm</ion-select-option>
+              <ion-select-option value="10.45pm">10.45pm</ion-select-option>
+
+              <ion-select-option value="11.00pm">11.00pm</ion-select-option>
+              <ion-select-option value="11.15pm">11.15pm</ion-select-option>
+              <ion-select-option value="11.30pm">11.30pm</ion-select-option>
+              <ion-select-option value="11.45pm">11.45pm</ion-select-option>
+            </ion-select>
+          </ion-input>
+
+        </ion-list>
+      
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="back()">Back</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="getOpenningDetails()">Save</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+</ion-content>

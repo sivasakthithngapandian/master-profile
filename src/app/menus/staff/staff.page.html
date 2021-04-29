@@ -1,0 +1,166 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">staff</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-avatar slot="start">
+      <img src="assets/avatar.png">
+    </ion-avatar>
+    <!-- <label>{{staff.staffname}}</label> -->
+  </ion-item> 
+
+  <ion-item>
+    <ion-input [(ngModel)]="staff.staffname" placeholder="Enter staff Name" clearInput></ion-input>
+  </ion-item>
+
+  
+  <ion-item>
+    <ion-label>Working hours</ion-label>
+    <ion-select value="9am to 7pm" [(ngModel)]="staff.worktime" >
+      <ion-select-option value="8am to 6pm">8am to 6pm</ion-select-option>
+      <ion-select-option value="8am to 7pm">8am to 7pm</ion-select-option>
+      <ion-select-option value="8am to 8pm">8am to 8pm</ion-select-option>
+      <ion-select-option value="9am to 6pm">9am to 6pm</ion-select-option>
+      <ion-select-option value="9am to 7pm">9am to 7pm</ion-select-option>
+      <ion-select-option value="9am to 8pm">9am to 8pm</ion-select-option>
+      <ion-select-option value="10am to 6pm">10am to 6pm</ion-select-option>
+      <ion-select-option value="10am to 7pm">10am to 7pm</ion-select-option>
+      <ion-select-option value="10am to 8pm">10am to 8pm</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <div>
+    <ion-item>
+      <ion-label>Services</ion-label>
+      <ion-select Multiple="true" [(ngModel)]="staff.service">
+       <!--  <ion-select-option value="Manicure">Manicure</ion-select-option>
+        <ion-select-option value="pedicure">pedicure</ion-select-option>
+        <ion-select-option value="Hair cut">Hair cut</ion-select-option>
+        <ion-select-option value="Highlights">Highlights</ion-select-option>
+        <ion-select-option value="Acrylic nails">Acrylic nails</ion-select-option>
+        <ion-select-option value="Haircolour">Haircolour</ion-select-option>
+        <ion-select-option value="Shave">Shave</ion-select-option>
+        <ion-select-option value="Beard trim">Beard trim</ion-select-option>
+        <ion-select-option value="10am to 8pm">10am to 8pm</ion-select-option> -->
+        <ion-list *ngFor="let item of service1list">
+          <ion-item>
+            <ion-select-option [value]="item.service1">{{item.service1}}</ion-select-option>
+            <ion-label>{{item.service1}}</ion-label>
+          </ion-item>
+        </ion-list>
+        <ion-list *ngFor="let item of staffmember">
+          <ion-item>       
+          <!-- <ion-select  [(ngModel)]="staff.ServiceName"> -->
+            <ion-select-option [value]="item.ServiceName">{{item.ServiceName}}</ion-select-option>
+          <!-- </ion-select> -->
+          <ion-label>{{item.ServiceName}}</ion-label>
+        </ion-item>
+      </ion-list>
+      </ion-select>
+    </ion-item>
+  </div>
+
+  <ion-item>
+    <ion-input type="number" [(ngModel)]="staff.phone" placeholder="Enter phone number" clearInput></ion-input>
+  </ion-item>
+
+  <!--
+  <div>
+    <ion-list>
+      <ion-list-header><b>Services</b></ion-list-header>
+      <ion-item>
+        <ion-checkbox value="Manicure" [(ngModel)]="staff.service" (ionChange)="elmentchange($event,'Manicure')" color="primary" slot="end"></ion-checkbox>
+        <ion-label>Manicure</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox value="Hair cut" color="primary" slot="end"></ion-checkbox>
+        <ion-label>Hair cut</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox color="primary"  [(ngModel)]="staff.service" slot="end"></ion-checkbox>
+        <ion-label>pedicure</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox color="primary" slot="end"></ion-checkbox>
+        <ion-label>Highlights</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox color="primary" slot="end"></ion-checkbox>
+        <ion-label>Acrylic nails</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox color="primary" slot="end"></ion-checkbox>
+        <ion-label>Haircolour</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox color="primary" slot="end"></ion-checkbox>
+        <ion-label>Shave</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox color="primary" slot="end"></ion-checkbox>
+        <ion-label>Beard trim</ion-label>
+      </ion-item>
+
+           <ion-list *ngFor="let item of staffmember">
+          <ion-item>
+          <ion-checkbox slot="end" [(ngModel)]="service.ServiceName"></ion-checkbox>
+          <ion-label>{{item.ServiceName}}</ion-label>
+        </ion-item>
+        </ion-list> -->
+      
+      <!-- <ion-item>
+        <ion-input *ngFor="let item of staffmember">
+          <ion-checkbox slot="end"></ion-checkbox>
+            <ion-label>{{item.ServiceName}}</ion-label>
+        </ion-input>
+      </ion-item> -->
+
+      <!-- <ion-card *ngFor="let item of staffmember">
+        <ion-card-content>
+          <ion-item >
+            <ion-checkbox slot="end"></ion-checkbox>
+            <ion-label>{{item.ServiceName}}</ion-label>
+          </ion-item>
+          </ion-card-content>
+        </ion-card> -->
+
+        
+
+    <!-- </ion-list> -->
+    <!--<ion-item>
+       <ion-label><b>Services</b></ion-label>
+      <ion-select multiple="true" cancelText="cancel" okText="Ok" [(ngModel)]="staff.service">
+        <ion-select-option value="Manicure">Manicure</ion-select-option>
+        <ion-select-option value="pedicure">pedicure</ion-select-option>
+        <ion-select-option value="hair cut">Hair cut</ion-select-option>
+        <ion-select-option value="Acrylic nails">Acrylic nails</ion-select-option>
+        <ion-select-option value="Color">Color</ion-select-option>
+        <ion-select-option value="Highlights"> Highlights</ion-select-option>
+        <ion-select-option value="Haircolour">Haircolour</ion-select-option>
+        <ion-select-option value="Shave">Shave</ion-select-option>
+        <ion-select-option value="Beard trim">Beard trim</ion-select-option>
+       </ion-select>  
+      </ion-item>   
+    </div>
+    -->
+     
+
+
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="back()">Back</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="getStaffDetails()">Save</ion-button>
+       
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+ 
+
+</ion-content>

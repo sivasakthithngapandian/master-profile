@@ -1,0 +1,28 @@
+ion-toolbar{
+    --ion-background-color: blue;
+    margin-top: 1px;
+    text-align: center;
+    //background-color: rgb(134, 21, 138);
+    color:white;
+}
+ion-title{
+    color: blue;
+    text-align: justify;
+    font-family: cursive;
+    font-size: 20px;
+    block-size: 50px;
+}
+.digit{
+    color: black;
+    font-family: cursive;
+    font-size: 20px;
+    block-size: 50px;
+    text-align: justify;
+}
+ion-label{
+    font-size: 16px;
+    text-align: center;
+    font-family: cursive;
+    font-size: 20px;
+
+}

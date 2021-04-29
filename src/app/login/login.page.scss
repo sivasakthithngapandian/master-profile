@@ -1,0 +1,17 @@
+.backgroundImage{
+   --background: url('../../assets/backgroundParlour.jpg') 0 0/100% 100% no-repeat !important;
+   --padding: $spacer !important;
+}
+// ion-content{
+//    --display:flex;
+//    --flex-direction: column;
+// }
+.phonenumber{
+  display:flex;
+  //flex-direction:row;
+  justify-content: center;
+  padding-left: 50px !important;
+  padding-right: 50px !important;
+  padding-top : 100px !important;
+                      
+}
